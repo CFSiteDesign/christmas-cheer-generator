@@ -59,77 +59,74 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Ho! Ho! Holy Sh*t! poster palette */
+  --color-xred: var(--xred);
+  --color-xred-deep: var(--xred-deep);
+  --color-xpink: var(--xpink);
+  --color-xpink-deep: var(--xpink-deep);
+  --color-xgreen: var(--xgreen);
+  --color-xgreen-deep: var(--xgreen-deep);
+  --color-xlime: var(--xlime);
+  --color-xblue: var(--xblue);
+  --color-xcream: var(--xcream);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
 }
 
+/*
+ * Palette sampled from the Christmas 2026 poster: tomato red ground, magenta
+ * swirl, two-tone tree green, lime labels, blue starbursts, cream sparkles,
+ * black ink outlines.
+ */
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
-}
+  --xred: oklch(0.589 0.222 29.14);
+  --xred-deep: oklch(0.468 0.18 29.01);
+  --xpink: oklch(0.605 0.235 0.75);
+  --xpink-deep: oklch(0.426 0.162 2.46);
+  --xgreen: oklch(0.559 0.158 142.38);
+  --xgreen-deep: oklch(0.413 0.115 143.15);
+  --xlime: oklch(0.874 0.247 133.91);
+  --xblue: oklch(0.514 0.187 260.27);
+  --xcream: oklch(0.89 0.061 76.61);
+  --ink: oklch(0.178 0 0);
+  --paper: oklch(0.981 0.018 81.33);
 
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --radius: 0rem;
+  --background: var(--xred);
+  --foreground: oklch(1 0 0);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--xlime);
+  --primary-foreground: var(--ink);
+  --secondary: var(--xpink);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.923 0.027 80.25);
+  --muted-foreground: oklch(0.45 0.02 60);
+  --accent: var(--xblue);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: var(--xred-deep);
+  --destructive-foreground: oklch(1 0 0);
+  --border: var(--ink);
+  --input: var(--ink);
+  --ring: var(--xlime);
+  --chart-1: var(--xred);
+  --chart-2: var(--xgreen);
+  --chart-3: var(--xblue);
+  --chart-4: var(--xlime);
+  --chart-5: var(--xpink);
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--xlime);
+  --sidebar-primary-foreground: var(--ink);
+  --sidebar-accent: oklch(0.923 0.027 80.25);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: var(--ink);
+  --sidebar-ring: var(--xlime);
 }
 
 @layer base {
@@ -137,8 +134,176 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* print grain over everything, like the poster stock */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 240px;
+  }
+
+  ::selection {
+    background: var(--xlime);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  /* wide black grotesk from the poster type */
+  .font-display {
+    font-family: "Archivo", "Arial Black", Impact, sans-serif;
+    font-weight: 900;
+    font-stretch: 125%;
+    text-transform: uppercase;
+    letter-spacing: -0.005em;
+  }
+
+  /* chunky pixel face, echoes the HO! HO! lettering */
+  .font-pixel {
+    font-family: "Silkscreen", ui-monospace, monospace;
+    text-transform: uppercase;
+  }
+
+  /*
+   * White letters with an ink outline and a stepped ink extrusion, the way
+   * HOLY SH*T! sits on the poster. paint-order puts the stroke behind the
+   * fill, so only half of it shows: the width is doubled to compensate.
+   */
+  .text-extrude {
+    color: #fff;
+    -webkit-text-stroke: 0.09em var(--ink);
+    paint-order: stroke fill;
+    text-shadow:
+      0.025em 0.025em 0 var(--ink),
+      0.05em 0.05em 0 var(--ink),
+      0.075em 0.075em 0 var(--ink),
+      0.1em 0.1em 0 var(--ink);
+  }
+
+  .ink-border {
+    border: 3px solid var(--ink);
+  }
+
+  .shadow-hard {
+    box-shadow: 6px 6px 0 0 var(--ink);
+  }
+  .shadow-hard-lg {
+    box-shadow: 10px 10px 0 0 var(--ink);
+  }
+
+  /* press-in on hover, the sticker gets pushed onto the page */
+  .press-hover {
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .press-hover:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0 0 var(--ink);
+  }
+
+  /* lift on hover for buttons */
+  .lift-hover {
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .lift-hover:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 0 var(--ink);
+  }
+
+  /* the lime title pill with stacked outlines underneath */
+  .stack-pill {
+    border: 3px solid var(--ink);
+    border-radius: 999px;
+    background: var(--xlime);
+    color: var(--ink);
+    box-shadow:
+      0 6px 0 -3px var(--xlime),
+      0 6px 0 0 var(--ink),
+      0 12px 0 -3px var(--xlime),
+      0 12px 0 0 var(--ink);
+  }
+
+  /*
+   * Print halftone laid over a colour field. Two offset dot grids give the
+   * 45 degree screen from the wristband artwork.
+   */
+  .halftone-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    background-image:
+      radial-gradient(circle, rgb(0 0 0 / 0.3) 0 1.2px, transparent 1.7px),
+      radial-gradient(circle, rgb(0 0 0 / 0.3) 0 1.2px, transparent 1.7px);
+    background-size: 8px 8px;
+    background-position:
+      0 0,
+      4px 4px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .animate-marquee {
+    animation: marquee 38s linear infinite;
+  }
+  .animate-marquee-reverse {
+    animation: marquee-reverse 38s linear infinite;
+  }
+  .animate-marquee-slow {
+    animation: marquee 60s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-marquee-slow {
+    animation: none;
   }
 }

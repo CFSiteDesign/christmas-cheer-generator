@@ -78,20 +78,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Ho! Ho! Holy Sh*t! · Christmas with Mad Monkey" },
+      {
+        name: "description",
+        content:
+          "Christmas Day at Mad Monkey, 25 December 2026. Live DJ, roast dinner with all the trimmings and a free flow package. Claim your seat at the table.",
+      },
+      { name: "author", content: "Mad Monkey Hostels" },
+      { name: "theme-color", content: "#e3261c" },
+      { property: "og:title", content: "Ho! Ho! Holy Sh*t! · Christmas with Mad Monkey" },
+      {
+        property: "og:description",
+        content:
+          "Live DJ, roast dinner with all the trimmings and a free flow package. 25 December. Claim your seat.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/og-xmas.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:image", content: "/og-xmas.jpg" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Silkscreen:wght@400;700&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
