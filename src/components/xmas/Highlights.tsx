@@ -1,15 +1,19 @@
-import type { ComponentType } from "react";
-import { Halftone, Sparkle, Tree } from "@/components/xmas/Decor";
-import { DjArt, FreeFlowArt, RoastArt } from "@/components/xmas/Illustrations";
+import dj480 from "@/assets/card-dj-480.webp";
+import dj800 from "@/assets/card-dj-800.webp";
+import freeflow480 from "@/assets/card-freeflow-480.webp";
+import freeflow800 from "@/assets/card-freeflow-800.webp";
+import roast480 from "@/assets/card-roast-480.webp";
+import roast800 from "@/assets/card-roast-800.webp";
+import { Halftone, Tree } from "@/components/xmas/Decor";
 
 type Highlight = {
   title: string;
   sub: string;
   badge: string;
   copy: string;
-  panel: string;
+  /** card photo, 5:4, at 480 and 800 wide */
+  image: { small: string; large: string; alt: string };
   tilt: string;
-  Art: ComponentType<{ className?: string }>;
 };
 
 const HIGHLIGHTS: Highlight[] = [
@@ -18,41 +22,54 @@ const HIGHLIGHTS: Highlight[] = [
     sub: "Festive bangers only",
     badge: "Turn it up",
     copy: "A live DJ on the decks for Christmas Day. Festive classics, proper bangers and the Mariah moment everyone pretends to hate. Dance off the roast.",
-    panel: "bg-xpink",
+    image: {
+      small: dj480,
+      large: dj800,
+      alt: "DJ in a Santa hat playing to a crowd of backpackers under palm trees and fairy lights",
+    },
     tilt: "-rotate-3",
-    Art: DjArt,
   },
   {
     title: "Roast Dinner",
     sub: "& all the trimmings",
     badge: "The main event",
     copy: "A proper Christmas roast with all the trimmings, served at one long table with the whole hostel. The closest thing to Christmas at home, minus the family politics.",
-    panel: "bg-xblue",
+    image: {
+      small: roast480,
+      large: roast800,
+      alt: "Christmas table with a roast turkey, roast potatoes, pigs in blankets, carrots and gravy being poured",
+    },
     tilt: "rotate-2",
-    Art: RoastArt,
   },
   {
     title: "Free Flow",
     sub: "Package",
     badge: "Pour decisions",
     copy: "Add the free flow package and the drinks keep coming. What gets poured and for how long is down to each hostel, so check yours below.",
-    panel: "bg-xred",
+    image: {
+      small: freeflow480,
+      large: freeflow800,
+      alt: "Backpackers in Santa hats clinking beers at the bar while a bartender in elf ears pours a jug of red punch",
+    },
     tilt: "-rotate-2",
-    Art: FreeFlowArt,
   },
 ];
 
 const HighlightCard = ({ item }: { item: Highlight }) => {
-  const { Art } = item;
   return (
-    <article className="ink-border shadow-hard-lg press-hover flex flex-col bg-paper text-ink">
-      <div
-        className={`relative isolate aspect-[6/5] overflow-hidden border-b-[3px] border-ink ${item.panel}`}
-      >
-        <Halftone className="-z-10 opacity-60" />
-        <Sparkle className="absolute right-[8%] top-[10%] -z-10 w-8 text-xcream" />
-        <Sparkle className="absolute bottom-[12%] left-[7%] -z-10 w-5 text-xcream" />
-        <Art className="absolute inset-x-[8%] bottom-[6%] top-[14%] m-auto h-[80%] w-[84%]" />
+    <article className="group ink-border shadow-hard-lg press-hover flex flex-col bg-paper text-ink">
+      <div className="relative aspect-[5/4] overflow-hidden border-b-[3px] border-ink bg-ink">
+        <img
+          src={item.image.large}
+          srcSet={`${item.image.small} 480w, ${item.image.large} 800w`}
+          sizes="(min-width: 768px) 33vw, 92vw"
+          width={800}
+          height={640}
+          alt={item.image.alt}
+          loading="lazy"
+          decoding="async"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
         <span
           className={`ink-border font-pixel absolute left-3 top-3 bg-paper px-2 py-1 text-[11px] font-bold leading-none md:left-4 md:top-4 md:text-xs ${item.tilt}`}
         >
