@@ -21,13 +21,38 @@ export const COUNTRIES: CountryFilter[] = [
 ];
 
 /**
- * TURNING THE LINKS ON
- * Every card reads COMING SOON until its hostel has a URL here. Paste each
- * Christmas event page (or seat booking link) against the hostel id as they
- * come through, e.g.
- *   "siem-reap": "https://madmonkeyhostels.com/tours-events/...",
+ * Christmas event pages on madmonkeyhostels.com, supplied by Charlie on
+ * 25 Nov 2026. A hostel with no entry here reads COMING SOON.
+ * Traps: Hanoi uses christmas-event-, not christmas-2026-, and Vang Vieng's
+ * page is the bare christmas-2026-mad-monkey with no location suffix.
+ * Kampot has no page yet.
  */
-const EVENT_PAGES: Partial<Record<string, string>> = {};
+const BASE = "https://madmonkeyhostels.com/tours-events/";
+
+const EVENT_PAGES: Partial<Record<string, string>> = {
+  "koh-rong": `${BASE}christmas-2026-mad-monkey-koh-rong`,
+  "koh-sdach": `${BASE}christmas-2026-mad-monkey-koh-sdach`,
+  "phnom-penh": `${BASE}christmas-2026-mad-monkey-phnom-penh`,
+  "siem-reap": `${BASE}christmas-2026-mad-monkey-siem-reap`,
+  "gili-t": `${BASE}christmas-2026-mad-monkey-gili-trawangan`,
+  "kuta-lombok": `${BASE}christmas-2026-mad-monkey-kuta-lombok`,
+  "nusa-lembongan": `${BASE}christmas-2026-mad-monkey-nusa-lembongan`,
+  uluwatu: `${BASE}christmas-2026-mad-monkey-uluwatu`,
+  "luang-prabang": `${BASE}christmas-2026-mad-monkey-luang-prabang`,
+  "vang-vieng": `${BASE}christmas-2026-mad-monkey`,
+  dumaguete: `${BASE}christmas-2026-mad-monkey-dumaguete`,
+  manila: `${BASE}christmas-2026-mad-monkey-manila`,
+  "nacpan-beach": `${BASE}christmas-2026-mad-monkey-nacpan`,
+  panglao: `${BASE}christmas-2026-mad-monkey-panglao`,
+  siargao: `${BASE}christmas-2026-mad-monkey-siargao`,
+  siquijor: `${BASE}christmas-2026-mad-monkey-siquijor`,
+  bangkok: `${BASE}christmas-2026-mad-monkey-bangkok`,
+  "chiang-mai": `${BASE}christmas-2026-mad-monkey-chiang-mai`,
+  pai: `${BASE}christmas-2026-mad-monkey-pai`,
+  phuket: `${BASE}christmas-2026-mad-monkey-phuket`,
+  hanoi: `${BASE}christmas-event-mad-monkey-hanoi`,
+  "hoi-an": `${BASE}christmas-2026-mad-monkey-hoi-an`,
+};
 
 const RAW: Array<[id: string, name: string, country: Country]> = [
   ["koh-rong", "Koh Rong", "Cambodia"],

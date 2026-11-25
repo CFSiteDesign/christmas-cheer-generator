@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-xred px-4 pb-20 pt-10 md:px-8 md:pb-24"
+      className="relative isolate flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-xred px-4 pb-20 pt-20 md:px-8 md:pb-24 md:pt-24 lg:pt-10"
     >
       {/* poster ground: magenta swirl, trees, bursts, sparkles, dot screen */}
       <Swirl className="absolute inset-0 -z-10 h-full w-full" />
@@ -27,6 +27,24 @@ const Hero = () => {
       <Sparkle className="absolute left-[24%] bottom-[10%] -z-10 w-8 text-xcream md:w-12" />
       <Sparkle className="absolute right-[26%] bottom-[6%] -z-10 hidden w-10 text-xcream md:block" />
       <Halftone className="-z-10 opacity-70" />
+
+      {/* way back to the main site: standard on every MM event page */}
+      <a
+        href="https://madmonkeyhostels.com"
+        className="ink-border font-display absolute right-4 top-4 z-20 inline-flex items-center gap-1.5 bg-paper px-3 py-2 text-[10px] text-ink shadow-[3px_3px_0_0_var(--ink)] transition-colors hover:bg-xlime md:right-8 md:top-7 md:gap-2 md:px-5 md:py-2.5 md:text-sm"
+      >
+        <svg
+          viewBox="0 0 16 16"
+          className="w-3 md:w-3.5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.4"
+          aria-hidden="true"
+        >
+          <path d="M10 3 5 8l5 5" strokeLinecap="square" />
+        </svg>
+        Homepage
+      </a>
 
       <div className="relative flex w-full max-w-5xl flex-col items-center text-center">
         <p className="stack-pill font-display inline-flex items-center gap-2 px-4 py-2 text-[0.7rem] sm:px-6 sm:text-sm md:gap-3 md:px-9 md:py-3 md:text-xl">
